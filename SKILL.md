@@ -104,47 +104,62 @@ python3 .agents/skills/firesprinklerskill/scripts/verify_reacher.py --email owne
 ## 6. Cold Outreach Scripts & The Neutral Introduction
 
 ### To the Building Manager / Property Owner (Demand)
-*Subject:* Fire Marshal inspection notice - {property_address}
+*Subject:* Fire Watch - {{.property_address}}
 
-> Hey {first_name},
->
-> Saw the 30-day fire marshal compliance notice filed on the {property_address} sprinkler tags on Friday.
->
-> Paying for mandatory fire watch while waiting on contractors is brutal.
->
-> I partner with a state-licensed fire protection contractor in {place} that has immediate inspection slots open to certify the riser valves and file the report with the marshal this week.
->
-> Open to an intro?
+```text
+Hey {{.FirstName}}
+
+Saw the FDNY compliance notice filed on the {{.property_address}} sprinkler tags.
+
+Paying for mandatory fire watch while waiting on contractors in NYC is brutal.
+
+I partner with a licensed fire suppression contractor here that has open slots to inspect the riser and file with the marshal this week.
+
+Open to an intro?
+
+Best,
+Abdulaziz
+```
 
 *(Sent strictly in plain text: `text_only = true`, no HTML, no tracking pixel).*
 
 ---
 
 ### To the Licensed Fire Sprinkler Contractor / RME-G (Supply)
-*Subject:* Open compliance inspection in {place}
+*Subject:* Sprinkler accounts
 
-> Hi {first_name},
->
-> Are you taking on commercial fire sprinkler inspection and recertification work in {place} right now?
->
-> I have a commercial property manager under a 30-day Fire Marshal citation for an overdue NFPA 25 tag looking for a licensed contractor to inspect the riser and file the compliance sign-off this week to avoid physical fire watch.
->
-> Wanted to check your field capacity before making an introduction.
+```text
+Hey {{.FirstName}}
+
+I have commercial properties and landlords in NYC under active FDNY sprinkler violation orders looking for sign-offs this week to avoid fire watch.
+
+Before I send anyone your way, wanted to check if you have inspection bandwidth right now.
+
+What boroughs do you cover?
+
+Best,
+Abdulaziz
+```
 
 ---
 
 ### The Warm 3-Way Introduction (Once Contractor Confirms Fee)
 *Subject:* Intro: {building_representative} <> {contractor_name} (Sprinkler Recertification)
 
-> Hi {building_greeting}, {contractor_greeting},
->
-> Connecting you both here.
->
-> {building_representative} runs {property_name} at {property_address} and needs an expedited NFPA 25 inspection and riser valve tag recertification to clear the active Fire Marshal notice before the deadline.
->
-> {contractor_representative} is an RME-G licensed fire protection contractor with open inspection bandwidth in {place} who can certify the system and submit the required documentation directly to the Fire Prevention Bureau.
->
-> I'll step aside and let you two coordinate access, scheduling, and paperwork from here.
+```text
+Hi {building_greeting}, {contractor_greeting},
+
+Connecting you both here.
+
+{building_representative} runs {property_name} at {property_address} and needs an expedited NFPA 25 inspection and riser valve tag recertification to clear the active Fire Marshal notice before the deadline.
+
+{contractor_representative} is an RME-G licensed fire protection contractor with open inspection bandwidth in {place} who can certify the system and submit the required documentation directly to the Fire Prevention Bureau.
+
+I'll step aside and let you two coordinate access, scheduling, and paperwork from here.
+
+Best,
+Abdulaziz
+```
 
 ---
 

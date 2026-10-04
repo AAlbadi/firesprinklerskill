@@ -317,23 +317,23 @@ def main():
     DELETE FROM campaigns WHERE id IN ('{NYC_DEMAND_CAMP_ID}', '{NYC_SUPPLY_CAMP_ID}');
     """)
 
-    # Personalized Copy with "Abdulaziz" and double escaped tags {{{{...}}}}
-    d_subject = "FDNY compliance notice - {{.CustomFields.property_address}}"
+    # Personalized Ultra-Short Pharmacy-Style Copy (Signed: Abdulaziz)
+    d_subject = "Fire Watch - {{.property_address}}"
     d_body = (
-        "Hey {{.FirstName}},\n\n"
-        "Saw the FDNY compliance notice filed on the {{.CustomFields.property_address}} sprinkler tags.\n\n"
-        "Paying for mandatory fire watch / licensed fire guards while waiting on contractors in NYC is brutal.\n\n"
-        "I partner with a licensed Master Fire Suppression Piping Contractor in NYC that has immediate inspection slots open to certify the riser valves and file the sign-off with the Bureau of Fire Prevention this week.\n\n"
+        "Hey {{.FirstName}}\n\n"
+        "Saw the FDNY compliance notice filed on the {{.property_address}} sprinkler tags.\n\n"
+        "Paying for mandatory fire watch while waiting on contractors in NYC is brutal.\n\n"
+        "I partner with a licensed fire suppression contractor here that has open slots to inspect the riser and file with the marshal this week.\n\n"
         "Open to an intro?\n\n"
         "Best,\nAbdulaziz"
     ).replace("'", "''")
 
-    s_subject = "Open sprinkler inspection work in NYC"
+    s_subject = "Sprinkler accounts"
     s_body = (
-        "Hi {{.FirstName}},\n\n"
-        "Are you taking on commercial fire sprinkler inspection and riser tag recertification work in NYC right now?\n\n"
-        "I have a commercial building manager under an active FDNY violation order for an overdue sprinkler tag looking for a licensed contractor to inspect the riser and file the sign-off this week to clear the order.\n\n"
-        "Wanted to check your field capacity before making an introduction.\n\n"
+        "Hey {{.FirstName}}\n\n"
+        "I have commercial properties and landlords in NYC under active FDNY sprinkler violation orders looking for sign-offs this week to avoid fire watch.\n\n"
+        "Before I send anyone your way, wanted to check if you have inspection bandwidth right now.\n\n"
+        "What boroughs do you cover?\n\n"
         "Best,\nAbdulaziz"
     ).replace("'", "''")
 
