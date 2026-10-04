@@ -1,0 +1,17 @@
+firesprinklerskill — Expired Fire Suppression Sprinkler Tests & Municipal Citations
+===================================================================================
+
+REQUIREMENTS:
+- Python 3.9+
+- Docker running reacherhq/backend:latest (or check-if-email-exists) on localhost:8081
+- PostgreSQL Warmbly database running in container warmbly-postgres-1
+
+HOW TO RUN:
+1. Extract leads for both demand and supply:
+   python3 scripts/firesprinklermarket.py --demand 50 --contractors 50 --out ~/Desktop
+
+2. Fetch live citation updates from municipal open data APIs:
+   python3 scripts/fetch_citations.py
+
+3. Run Reacher email verification:
+   python3 scripts/verify_reacher.py input.csv verified_output.csv
